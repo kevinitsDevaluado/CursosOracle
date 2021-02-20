@@ -1,0 +1,34 @@
+{% extends 'list.html' %}
+{% load static %}
+<!-- HEAD -->
+{% block head_list %}
+    <script src="{% static 'SubirTarea/js/list.js' %}"></script>
+{% endblock head_list %}
+<!--TITULO DE LA PAG NAV-->
+{% block tittlePage %}
+    {{ tittle }}
+{% endblock tittlePage %}
+<!--TITULO DEL CUADRO-->
+{% block tittle %}
+    {{ tittle }}
+    
+{% endblock tittle %}   
+{% block columns %}
+    <tr>
+        <th scope="col" style="width:10%">Nro</th>
+        <th scope="col" style="width:20%">Tarea</th>
+        <th scope="col" style="width:10%">Options</th>
+        <!-- <th scope="col">Handle</th> -->
+    </tr>
+
+{% endblock columns %}
+
+{% block rows %}
+
+{% endblock rows %}
+
+
+{% block javascript %}
+    
+{% endblock javascript %}
+    

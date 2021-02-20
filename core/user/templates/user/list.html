@@ -1,0 +1,36 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'user/js/list.js' %}"></script>
+{% endblock %}
+
+<!--TITULO DE LA PAG NAV-->
+{% block tittlePage %}
+    {{ tittle }}
+{% endblock tittlePage %}
+<!--TITULO DEL CUADRO-->
+{% block tittle %}
+    {{ tittle }}
+{% endblock tittle %}   
+
+{% block columns %}
+<tr>
+    <th scope="col">Nro</th>
+    <th scope="col">Nombres</th>
+    <th scope="col">Username</th>
+    <th scope="col">Fecha de registro</th>
+    <th scope="col">Imagen</th>
+    <th scope="col">Grupos</th>
+    <th scope="col">Opciones</th>
+</tr>
+{% endblock columns %}
+
+
+{% block rows %}
+
+{% endblock rows %}
+
+
+{% block javascript %}
+    
+{% endblock %}

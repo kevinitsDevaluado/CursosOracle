@@ -1,0 +1,115 @@
+{% load static %}
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="{% url 'index' %}" class="brand-link">
+        <img src="{% static 'img/logo.png' %}"
+             alt=""
+             class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light">Hades <strong>Academic</strong></span>
+    </a>
+    <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="{{ request.user.get_image }}" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">{{ user.username }}</a>
+            </div>
+        </div>
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-header">MóDULOS</li>
+                <li class="nav-item">
+                    {% if perms.erp.view_instituto %}
+                    <a href="{% url 'erp:instituto_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-university"></i>
+                        <p>
+                            Institución
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    {% if perms.erp.view_curso %}
+                    <a href="{% url 'erp:curso_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-clipboard"></i>
+                        <p>
+                            Cursos
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                
+                <li class="nav-item">
+                    {% if perms.erp.view_matricula %}
+                    <a href="{% url 'erp:matricula_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-file"></i>
+                        <p>
+                            Matriculas
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                
+                <li class="nav-item">
+                    {% if perms.erp.view_materia %}
+                    <a href="{% url 'erp:materia_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-table"></i>
+                        <p>
+                            Materias
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    {% if perms.erp.view_silabo %}
+                    <a href="{% url 'erp:silabo_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-clipboard"></i>
+                        <p>
+                            Tareas
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    
+                    {% if perms.erp.view_subirtarea %}
+                    <a href="{% url 'erp:subirtarea_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-check"></i>
+                        <p>
+                            Tareas Entregadas
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    
+                    {% if perms.erp.view_notastarea %}
+                    <a href="{% url 'erp:notastarea_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-list-alt"></i>
+                        <p>
+                            Calificaciones
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                {% if perms.user.view_silabo %}
+                <li class="nav-header">USUARIOS</li>
+                {% endif %}
+                <li class="nav-item">
+                    {% if perms.user.view_silabo %}
+                    <a href="{% url 'user:user_list' %}" class="nav-link">
+                        <i class="nav-icon fa fa-university"></i>
+                        <p>
+                            Usuarios
+                        </p>
+                    </a>
+                    {% endif %}
+                </li>
+                <li class="nav-header">
+                    <h5> <strong></strong>  </h5>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</aside>

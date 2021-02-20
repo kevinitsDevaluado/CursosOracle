@@ -1,0 +1,159 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block tittlePage %}
+    Paralelos
+{% endblock tittlePage %}
+
+{% block contenido %} 
+
+<!--CURSOS -->
+<!--CURSOS -->
+<div class="card">
+    <div class="card-header ui-sortable-handle" style="cursor: move;">
+      <h3 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cursos</font></font></h3>
+
+      <div class="card-tools">
+        <span data-toggle="tooltip" title="3 mensajes nuevos" class="badge badge-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></span>
+        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <br>
+        <div class="row" style="margin: 2px;">
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+                  <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Segundo</font></font></h3>
+        
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"La escuela instruye y la familia los EDUCA"</font></font></p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="{% url 'erp:curso_list_a' %}" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Tercero </font></font><sup style="font-size: 20px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></sup></h3>
+        
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"Sin profes la vida no tendria Ninguna Clase"</font></font></p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="{% url 'erp:curso_list_2' %}" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cuarto</font></font></h3>
+        
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"El aprendizaje nunca cansa a la mente Nunca"</font></font></p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quinto</font></font></h3>
+        
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"Tu amigo de viaje que sea un buen libro"</font></font></p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                  <div class="inner">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sextos</font></font></h3>
+          
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"La educación es tu mejor Opcion"</font></font></p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                  </div>
+                  <a href="#" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                  <div class="inner">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Septimo</font></font></h3>
+          
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"La educación Nunca termina"</font></font></p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                  </div>
+                  <a href="#" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                  <div class="inner">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Octavo</font></font></h3>
+          
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"Enseñar es aprender dos veces"</font></font></p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                  </div>
+                  <a href="#" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-success">
+                  <div class="inner">
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Noveno</font></font></h3>
+          
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"Nunca dejes de Soñar Soñar"</font></font></p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-pie-graph"></i>
+                  </div>
+                  <a href="#" class="small-box-footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Más información </font></font><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+          </div>
+          {% if perms.erp.view_silabo %}
+          <div class="card-footer">
+            {% block buttons_list %}
+            <a href="{{ create_url }}"class="btn btn-primary btn-flat btnTest">
+                <i class="fas fa-plus"></i> Nuevo registro
+            </a>
+            <a href=""class="btn btn-success btn-flat btnTest">
+                <i class="fas fa-plus"></i> Actualizar
+            </a>
+            {% endblock buttons_list %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+ 
+{% endblock contenido %}

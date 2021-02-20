@@ -1,0 +1,111 @@
+django-admin startproject lol
+
+
+--PARA ACCEDER A LA TABLA 
+from (aqui va el nombre de la aplicacion).models import (nombre de la tabla)
+--PARA INGRESAR INFORMACION
+art = Articulos (nombre='nasdasd',precio=34) 
+--guardamos la informacion con
+art.save()
+
+
+art es una variable puede ser cualquier nombre
+luego viene el nombre de la tabla entre parentesis
+viene primero el atributo = la informacion a ingresar
+si es varchar va entre '' si es entero solo el numero
+
+EN UN SOLO PASO
+art3 = Articulos.objects.create (nombre='ssdsd',precio=34)
+PARA ACTUALIZAR
+art.nombre = 'TV SAMSUNG'
+--art.atributo = a lo que quieres actualizar
+BORRAR
+se declara una variable y se hace lo siguiente
+art5=Articulos.objects.get(id=3)
+art5.delete()
+variable=nombreTabla.objects.get(por el parametro a borrar en este caso es el ID)
+SELECT 
+lista = Articulos.objects.all()
+lista.query.__src__()
+
+--se crea una variable luego se le iguala al nombre de la tabla
+.objects.all()
+y finalmente se ejecuta 
+variable.query.__src__()
+
+
+PARA MIGRAR LA BASE DE DATOS CREADA
+python manage.py makemigrations
+python manage.py migrate
+
+PARA HACER CONSULTAS
+ clientes.objects.filter(nombre='sadas')
+
+PRIMERO EN EL MODELER SE USA EL Str
+
+ def __str__(self):
+        return 'El nombre es: %s su direccion es: %s Su email es: %s Su telefno es: %s' % (self.nombre, self.direccion, self.emai, self.tfno)
+
+y listo
+BUSQUEDAS CN DOBLE CRITERIO
+clientes.objects.filter(nombre='sadas',email='saddas')
+
+PARA MAYOR Y MENOR EN EL SHELL
+en vez de mayo o menor
+
+precio__gte=100
+
+__gte es equivalente a mayor
+__lte es equivalente a menor
+__Range(10,150) RANGO
+ 
+PARA ORDENAR 
+DE MENOR A MAYOR
+clientes.objects.filter(precio_gte=100).order_by('precio')
+DE MAYOR A MENOR
+clientes.objects.filter(precio_gte=100).order_by('-precio')
+LIKE EN DJANGO
+__icontrains
+
+PARA QUE NO SEA OBLIGATORIO LLENAR EL CAMPO
+email=models.EmailFiel (blank= True, null= True)
+
+SIEMPRE QUE SE HAGA ALGO EN EL MODELO HAY QUE HACER LA MIGRACION
+python manage.py makemigratios
+python manage.py migrate
+
+ENVIO DE MAIL DESDE JANGO SE NECESITA LA LIBRERIA
+core.mail
+ESTO SE PONE EN LA PARTE DE SETTING CONFIGURACION
+PARA ENVIAR EMAIL
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_TLS= True
+EMAIL_PORT=587
+EMAIL_HOST_USER="kevin.alvarado8502@utc.edu.ec"
+EMAIL_HOST_PASSWORD="kevinpaul1997"
+
+PARA COMPROBAR SI ESTA BIEN VAMOS AL SHELL
+PONEMOS from django.core.mail import send_mail
+send_mail('asunto','mensaje','AQUI VA EL CORREO DEL QUE ENVIA',['EL CORREO AL QE VAMOS A ENVIAR], fail_silently=False)
+
+
+API sirve para hacer formularios mas facil
+y sobre todo con validaciones
+
+
+
+-----------------------------------------------
+ORACLE
+pi install cx_oracle 
+
+
+pip install django-widget-tweaks
+
+pip install -r requirements/requirements.txt
+
+
+
+LIBRERIA PARA PDF
+pip install xhtml2pdf
